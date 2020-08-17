@@ -1,0 +1,125 @@
+
+
+  <div class="container fluid">
+    <div class="row h-100 justify-content-center align-items-center">
+       
+
+    <form>
+
+      <input type = "hidden" [(ngModel)] = "employee.id" name = "id" /> 
+      
+        <div class="row">
+          <div class="col-md-6" > <input type = "text" [(ngModel)] = "employee.prenom" name = "prenom" class="form-control" placeholder="First name"></div>
+          <div class="col-md-6"><input type = "text" [(ngModel)] = "employee.nom" name = "nom" class="form-control" placeholder="Last name"></div>
+        </div> 
+        
+        <div class="row">
+          <div class="col-md-6" ><input type = "text" [(ngModel)] = "employee.cin" name = "cin" class="form-control" placeholder="CIN"></div>
+          <div class="col-md-6"><input type = "text" [(ngModel)] = "employee.numtel" name = "Telephone" class="form-control" placeholder="Telephone"></div>
+        </div> 
+
+        <div class="row">
+          <div class="col-md-6" ><input type = "text" [(ngModel)] = "employee.email" name = "email" class="form-control" placeholder="Email"></div>
+          <div class="col-md-6"><input type = "text" [(ngModel)] = "employee.datenaissance" name = "datenaissance" class="form-control" placeholder="Date of Birth"></div>
+        </div> 
+
+        <div class="row">
+          <div class="col-md-6" ><input type = "text" [(ngModel)] = "employee.adresse" name = "adresse" class="form-control" placeholder="Adress"></div>
+          <div class="col-md-6"><input type = "text" [(ngModel)] = "employee.nationalite" name = "nationalite" class="form-control" placeholder="Citizenship"></div>
+        </div> 
+
+        <div class="row">
+          <div class="col-md-6" ><input type = "text" [(ngModel)] = "employee.etatcivile" name = "etatcivile" class="form-control" placeholder="civil statu"></div>
+          <div class="col-md-6"><input type="text" [(ngModel)] = "employee.fonction" name = "fonction" class="form-control" placeholder="Occupation"></div>
+        </div> 
+
+        
+     
+      
+      <div class="col-md-12 text-center"> 
+        <button  (click) = "addemployee()" class="btn btn-success">Add employee</button> 
+    </div>
+        
+    </form>
+             
+         
+    
+  </div>
+
+  </div>
+
+      
+    
+  
+<div>
+
+
+    <table class="table table-striped" >
+        
+          <tr class="table-primary">
+            <th>Id</th>
+            
+            <th>First name</th>
+ 
+            <th>Last name</th>
+        
+            <th>CIN</th>
+           
+            <th>Telephone</th>
+
+            <th>Adress</th>
+          
+            <th>Email</th>
+           
+            <th>Date of Birth</th>
+           
+            <th>Citizenship</th>
+           
+             <th>Civil Statu</th>
+           
+            <th>Occupation</th>
+            
+             <th>    Actions  </th>
+            <th> </th>
+            
+        </tr>
+        <tr *ngFor = "let employee of employees">
+            <td>{{employee.id}}</td>
+         
+            <td>{{employee.prenom}}</td>
+          
+            <td>{{employee.nom}}</td>
+         
+            <td>{{employee.cin}}</td>
+        
+            <td>{{employee.numtel}}</td>
+
+            <td>{{employee.adresse}}</td>
+ 
+            <td>{{employee.email}}</td>
+
+            <td>{{employee.datenaissance}}</td>
+
+            <td>{{employee.nationalite}}</td>
+      
+            <td>{{employee.etatcivile}}</td>
+       
+            <td>{{employee.fonction}}</td>
+    
+            
+          
+            <td> 
+                
+              <button class="btn btn-primary" (click) = "getemployeeById(employee.id)">Modifier</button>  
+           
+          </td>
+          <td>
+              <button class="btn btn-danger" (click) = "deleteemployee(employee.id)"> Supprimer </button> 
+          </td>
+        
+          </tr>
+    </table>
+
+  </div>
+
+  

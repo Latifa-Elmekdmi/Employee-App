@@ -1,0 +1,66 @@
+<div class = "container">
+    
+    <div class="mx-auto" style="width: 300px ;">
+        
+        <h3 class="text-secondary">List of Employees</h3>
+     
+     </div>
+
+    <table class="table table-striped" >
+        
+        <tr class="table-primary">
+            <th>Id</th>
+            
+            <th>First name</th>
+ 
+            <th>Last name</th>
+        
+            <th>CIN</th>
+           
+            <th>Telephone</th>
+
+            <th>Adress</th>
+          
+            <th>Email</th>
+           
+            <th>Date of Birth</th>
+           
+            <th>Citizenship</th>
+           
+             <th>Civil Statu</th>
+           
+            <th>Occupation</th>
+
+            
+        </tr>
+        <tr *ngFor = "let employee of employees">
+            <td>{{employee.id}}</td>
+         
+            <td>{{employee.prenom}}</td>
+          
+            <td>{{employee.nom}}</td>
+         
+            <td>{{employee.cin}}</td>
+        
+            <td>{{employee.numtel}}</td>
+
+            <td>{{employee.adresse}}</td>
+ 
+            <td>{{employee.email}}</td>
+
+            <td>{{employee.datenaissance}}</td>
+            
+            <td>{{employee.nationalite}}</td>
+      
+            <td>{{employee.etatcivile}}</td>
+       
+            <td>{{employee.fonction}}</td>
+    
+            
+            
+           
+    </table>
+
+
+
+</div>
